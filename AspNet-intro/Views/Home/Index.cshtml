@@ -1,0 +1,41 @@
+﻿@model int[]
+
+
+@{
+
+    List<string> names = new List<string> { "Novrasta", "Gultac", "Lale" };
+    string baseStr = "Welcome";
+}
+
+
+
+
+
+@for (int i = 0; i < names.Count; i++)
+{
+    <h1>@(baseStr + " - " + @names[i])</h1>
+}
+
+
+
+@foreach (var item in names)
+{
+    <h1>@baseStr - @item</h1>
+}
+
+
+<p style="color:red">Hello</p>
+
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+    
+</ul>
+
+
+<script>
+    console.log("This is js")
+</script>
